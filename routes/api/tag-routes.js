@@ -8,8 +8,13 @@ router.get('/', async (req, res) => {
   // be sure to include its associated Product data
   let tags;
   try{
-  tags = await Product.findAll({
-    include: [Product],
+  tags = await Tag.findAll({
+    include: [
+      {
+        model: Product,
+        through: ProductTag,
+      },
+    ],
   });
 } catch (err) {
   res.status(500).json(err);
@@ -22,7 +27,7 @@ router.get('/:id', async (req, res) => {
   // be sure to include its associated Product data
   let tag;
   try {
-    tag = await tag.findOne({
+    tag = await Tag.findOne({
       where: {
         id: req.params.id,
       },
@@ -52,9 +57,9 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async(req, res) => {
   // update a tag's name by its `id` value
-let tags;
+let tag;
   try {
-  tags = await Tag.update(req.body, {
+  tag = await Tag.update(req.body, {
     where: {
       id: req.params.id,
     },
@@ -62,7 +67,7 @@ let tags;
   } catch (err) {
   res.status(500).json(err);
 }
-  res.json(tags);
+  res.json(tag);
 });
 
 router.delete('/:id', async (req, res) => {

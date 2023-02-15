@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
 } catch (err) {
   res.status(500).json(err);
 }
-  res.status(200).json(products);
+  res.json(products);
 });
 
 // get one product
@@ -45,7 +45,7 @@ router.get('/:id', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-    res.status(200).json(product);
+    res.json(product);
 });
 
 // create new product
