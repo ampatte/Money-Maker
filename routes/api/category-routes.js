@@ -24,7 +24,7 @@ router.get('/:id', async (req, res) => {
   try{
   categories = await Category.findOne({
     where: {
-      id: req.params,
+      id: req.params.id,
     },
     include: [Product],
   });

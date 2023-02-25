@@ -137,7 +137,7 @@ router.delete('/:id', (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
-      res.status(200).json(products);
+      res.json(products);
   });
 });
 
