@@ -1,6 +1,8 @@
 # Money-Maker
 https://github.com/ampatte/Money-Maker
 
+https://watch.screencastify.com/v/A3i2fOhHFGoyOkiixNQJ
+
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
