@@ -1,4 +1,5 @@
 # Money-Maker
+https://github.com/ampatte/Money-Maker
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -18,7 +19,8 @@
 
   ## Usage
   This was created as a homework challenge  is useful as a real world example as how to build an api and back end for an e-commerce site.
-  ![alt text](Assets/images/2023-01-05 (2).png)
+  ![code snippet1](/assets/CodeSnippet1.png)
+  ![code snippet2](/assets/CodeSnippet2.png)
   
   ## Contribution
   Me
