@@ -122,23 +122,19 @@ router.put('/:id', (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
   // delete one product by its `id` value
-  router.get('/:id', async (req, res) => {
-    // find a single product by its `id`
-    // be sure to include its associated Category and Tag data
-    let products;
-    try {
-      products = await Product.destroy({
-        where: {
-          id: req.params.id,
-        },
-      });    
-    } catch (err) {
-      res.status(500).json(err);
-    }
-      res.json(products);
-  });
+  let products;
+  try {
+    products = await Product.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });    
+  } catch (err) {
+    res.status(500).json(err);
+  }
+    res.json(products);
 });
 
 module.exports = router;
